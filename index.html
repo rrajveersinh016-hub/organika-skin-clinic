@@ -830,7 +830,60 @@
             .map-container { min-height: 300px; }
         }
 
+        .ba-placeholder-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.6);
+            position: absolute;
+            z-index: 1;
+        }
+
         @media (max-width: 768px) {
+            body, section {
+                max-width: 100vw;
+                overflow-x: hidden;
+            }
+
+            #home {
+                background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop') center/cover !important;
+            }
+            
+            .hero-content h1 { font-size: 2.2rem; color: var(--white); }
+            .hero-content .tagline { font-size: 1.2rem; color: var(--rose-gold); }
+            .hero-content > p { color: rgba(255,255,255,0.9); }
+
+            .stats-container {
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                gap: 5px;
+            }
+            .stat-number { font-size: 1.2rem; color: var(--white); }
+            .stat-label { font-size: 0.65rem; color: rgba(255,255,255,0.8); }
+
+            .services-grid { grid-template-columns: 1fr; }
+            .service-card {
+                width: 100%;
+                padding: 20px;
+            }
+            
+            .ba-images { min-height: 250px; }
+
+            .radio-group {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                gap: 5px;
+            }
+            .radio-btn label {
+                padding: 8px 4px;
+                font-size: 13px;
+                white-space: nowrap;
+            }
+
+            .about-grid { grid-template-columns: 1fr; text-align: center; }
+            .about-image img { width: 100%; aspect-ratio: auto; }
+            .about-content ul li { text-align: left; }
+
             .nav-links {
                 position: fixed;
                 top: 70px;
@@ -846,8 +899,6 @@
             }
             .nav-links.active { left: 0; }
             .nav-toggle { display: block; }
-            .hero-content h1 { font-size: 2.2rem; }
-            .hero-content .tagline { font-size: 1.2rem; }
             .section-title { font-size: 2rem; }
             .form-row { flex-direction: column; gap: 0; }
         }
@@ -1068,9 +1119,11 @@
                 <div class="gallery-card reveal">
                     <div class="ba-images">
                         <div class="ba-box ba-before">
+                            <span class="ba-placeholder-text">Patient Photo</span>
                             <span class="ba-label">Before</span>
                         </div>
                         <div class="ba-box ba-after">
+                            <span class="ba-placeholder-text">Patient Photo</span>
                             <span class="ba-label">After</span>
                         </div>
                     </div>
@@ -1083,9 +1136,11 @@
                 <div class="gallery-card reveal">
                     <div class="ba-images">
                         <div class="ba-box ba-before">
+                            <span class="ba-placeholder-text">Patient Photo</span>
                             <span class="ba-label">Before</span>
                         </div>
                         <div class="ba-box ba-after">
+                            <span class="ba-placeholder-text">Patient Photo</span>
                             <span class="ba-label">After</span>
                         </div>
                     </div>
@@ -1098,9 +1153,11 @@
                 <div class="gallery-card reveal">
                     <div class="ba-images">
                         <div class="ba-box ba-before">
+                            <span class="ba-placeholder-text">Patient Photo</span>
                             <span class="ba-label">Before</span>
                         </div>
                         <div class="ba-box ba-after">
+                            <span class="ba-placeholder-text">Patient Photo</span>
                             <span class="ba-label">After</span>
                         </div>
                     </div>
